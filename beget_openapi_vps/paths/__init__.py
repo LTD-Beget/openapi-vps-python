@@ -34,7 +34,6 @@ class PathValues(str, enum.Enum):
     V1_VPS_SNAPSHOT_RESTORE = "/v1/vps/snapshot/restore"
     V1_VPS_SNAPSHOT_ID = "/v1/vps/snapshot/{id}"
     V1_VPS_SNAPSHOT_ID_RESTORE = "/v1/vps/snapshot/{id}/restore"
-    V1_VPS_SOFTWARE = "/v1/vps/software"
     V1_VPS_SOFTWARE_REQUIREMENTS = "/v1/vps/software/requirements"
     V1_VPS_SSH_KEY = "/v1/vps/sshKey"
     V1_VPS_SSH_KEY_ID = "/v1/vps/sshKey/{id}"

@@ -8,7 +8,7 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
-**items** | str,  | str,  |  | [optional] 
+**variable** | str,  | str,  |  | [optional] 
 **label** | str,  | str,  |  | [optional] 
 **label_en** | str,  | str,  |  | [optional] 
 **description** | str,  | str,  |  | [optional] 

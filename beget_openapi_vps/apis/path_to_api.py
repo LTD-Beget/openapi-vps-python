@@ -29,7 +29,6 @@ from beget_openapi_vps.apis.paths.v1_vps_snapshot_calculator import V1VpsSnapsho
 from beget_openapi_vps.apis.paths.v1_vps_snapshot_restore import V1VpsSnapshotRestore
 from beget_openapi_vps.apis.paths.v1_vps_snapshot_id import V1VpsSnapshotId
 from beget_openapi_vps.apis.paths.v1_vps_snapshot_id_restore import V1VpsSnapshotIdRestore
-from beget_openapi_vps.apis.paths.v1_vps_software import V1VpsSoftware
 from beget_openapi_vps.apis.paths.v1_vps_software_requirements import V1VpsSoftwareRequirements
 from beget_openapi_vps.apis.paths.v1_vps_ssh_key import V1VpsSshKey
 from beget_openapi_vps.apis.paths.v1_vps_ssh_key_id import V1VpsSshKeyId
@@ -85,7 +84,6 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_VPS_SNAPSHOT_RESTORE: V1VpsSnapshotRestore,
         PathValues.V1_VPS_SNAPSHOT_ID: V1VpsSnapshotId,
         PathValues.V1_VPS_SNAPSHOT_ID_RESTORE: V1VpsSnapshotIdRestore,
-        PathValues.V1_VPS_SOFTWARE: V1VpsSoftware,
         PathValues.V1_VPS_SOFTWARE_REQUIREMENTS: V1VpsSoftwareRequirements,
         PathValues.V1_VPS_SSH_KEY: V1VpsSshKey,
         PathValues.V1_VPS_SSH_KEY_ID: V1VpsSshKeyId,
@@ -142,7 +140,6 @@ path_to_api = PathToApi(
         PathValues.V1_VPS_SNAPSHOT_RESTORE: V1VpsSnapshotRestore,
         PathValues.V1_VPS_SNAPSHOT_ID: V1VpsSnapshotId,
         PathValues.V1_VPS_SNAPSHOT_ID_RESTORE: V1VpsSnapshotIdRestore,
-        PathValues.V1_VPS_SOFTWARE: V1VpsSoftware,
         PathValues.V1_VPS_SOFTWARE_REQUIREMENTS: V1VpsSoftwareRequirements,
         PathValues.V1_VPS_SSH_KEY: V1VpsSshKey,
         PathValues.V1_VPS_SSH_KEY_ID: V1VpsSshKeyId,
