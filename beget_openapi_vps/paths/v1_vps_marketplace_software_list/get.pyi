@@ -27,6 +27,48 @@ from beget_openapi_vps import schemas  # noqa: F401
 
 from beget_openapi_vps.model.marketplace_get_software_list_response import MarketplaceGetSoftwareListResponse
 
+# Query params
+CategoryNameSchema = schemas.StrSchema
+DisplayNameSchema = schemas.StrSchema
+IsPinnedSchema = schemas.BoolSchema
+RequestRequiredQueryParams = typing_extensions.TypedDict(
+    'RequestRequiredQueryParams',
+    {
+    }
+)
+RequestOptionalQueryParams = typing_extensions.TypedDict(
+    'RequestOptionalQueryParams',
+    {
+        'category_name': typing.Union[CategoryNameSchema, str, ],
+        'display_name': typing.Union[DisplayNameSchema, str, ],
+        'is_pinned': typing.Union[IsPinnedSchema, bool, ],
+    },
+    total=False
+)
+
+
+class RequestQueryParams(RequestRequiredQueryParams, RequestOptionalQueryParams):
+    pass
+
+
+request_query_category_name = api_client.QueryParameter(
+    name="category_name",
+    style=api_client.ParameterStyle.FORM,
+    schema=CategoryNameSchema,
+    explode=True,
+)
+request_query_display_name = api_client.QueryParameter(
+    name="display_name",
+    style=api_client.ParameterStyle.FORM,
+    schema=DisplayNameSchema,
+    explode=True,
+)
+request_query_is_pinned = api_client.QueryParameter(
+    name="is_pinned",
+    style=api_client.ParameterStyle.FORM,
+    schema=IsPinnedSchema,
+    explode=True,
+)
 SchemaFor200ResponseBodyApplicationJson = MarketplaceGetSoftwareListResponse
 
 
@@ -55,6 +97,7 @@ class BaseApi(api_client.Api):
     @typing.overload
     def _marketplace_service_get_software_list_oapg(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -67,6 +110,7 @@ class BaseApi(api_client.Api):
     def _marketplace_service_get_software_list_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -75,6 +119,7 @@ class BaseApi(api_client.Api):
     @typing.overload
     def _marketplace_service_get_software_list_oapg(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -86,6 +131,7 @@ class BaseApi(api_client.Api):
 
     def _marketplace_service_get_software_list_oapg(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -96,7 +142,23 @@ class BaseApi(api_client.Api):
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
         """
+        self._verify_typed_dict_inputs_oapg(RequestQueryParams, query_params)
         used_path = path.value
+
+        prefix_separator_iterator = None
+        for parameter in (
+            request_query_category_name,
+            request_query_display_name,
+            request_query_is_pinned,
+        ):
+            parameter_data = query_params.get(parameter.name, schemas.unset)
+            if parameter_data is schemas.unset:
+                continue
+            if prefix_separator_iterator is None:
+                prefix_separator_iterator = parameter.get_prefix_separator_iterator()
+            serialized_data = parameter.serialize(parameter_data, prefix_separator_iterator)
+            for serialized_value in serialized_data.values():
+                used_path += serialized_value
 
         _headers = HTTPHeaderDict()
         # TODO add cookie handling
@@ -134,6 +196,7 @@ class MarketplaceServiceGetSoftwareList(BaseApi):
     @typing.overload
     def marketplace_service_get_software_list(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -146,6 +209,7 @@ class MarketplaceServiceGetSoftwareList(BaseApi):
     def marketplace_service_get_software_list(
         self,
         skip_deserialization: typing_extensions.Literal[True],
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -154,6 +218,7 @@ class MarketplaceServiceGetSoftwareList(BaseApi):
     @typing.overload
     def marketplace_service_get_software_list(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -165,12 +230,14 @@ class MarketplaceServiceGetSoftwareList(BaseApi):
 
     def marketplace_service_get_software_list(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
         return self._marketplace_service_get_software_list_oapg(
+            query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -184,6 +251,7 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -196,6 +264,7 @@ class ApiForget(BaseApi):
     def get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -204,6 +273,7 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -215,12 +285,14 @@ class ApiForget(BaseApi):
 
     def get(
         self,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
         return self._marketplace_service_get_software_list_oapg(
+            query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

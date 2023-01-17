@@ -41,15 +41,60 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = marketplace_service_api.MarketplaceServiceApi(api_client)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only optional values
+    query_params = {
+        'category_name': "category_name_example",
+        'display_name': "display_name_example",
+        'is_pinned': True,
+    }
     try:
-        api_response = api_instance.marketplace_service_get_software_list()
+        api_response = api_instance.marketplace_service_get_software_list(
+            query_params=query_params,
+        )
         pprint(api_response)
     except beget_openapi_vps.ApiException as e:
         print("Exception when calling MarketplaceServiceApi->marketplace_service_get_software_list: %s\n" % e)
 ```
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+category_name | CategoryNameSchema | | optional
+display_name | DisplayNameSchema | | optional
+is_pinned | IsPinnedSchema | | optional
+
+
+# CategoryNameSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# DisplayNameSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# IsPinnedSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+bool,  | BoolClass,  |  | 
 
 ### Return Types, Responses
 
