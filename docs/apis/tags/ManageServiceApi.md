@@ -425,6 +425,11 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     body = ManageChangeConfigurationRequest(
         id="id_example",
         configuration_id="configuration_id_example",
+        configuration_params=StructuresConfigurationParams(
+            cpu_count=1,
+            disk_size=1,
+            memory=1,
+        ),
     )
     try:
         api_response = api_instance.manage_service_change_configuration(
@@ -745,6 +750,11 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
         hostname="hostname_example",
         description="description_example",
         configuration_id="configuration_id_example",
+        configuration_params=StructuresConfigurationParams(
+            cpu_count=1,
+            disk_size=1,
+            memory=1,
+        ),
         software=ManageSoftwareInstallInfo(
             id=1,
             variable=dict(

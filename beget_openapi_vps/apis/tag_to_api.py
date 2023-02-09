@@ -2,6 +2,7 @@ import typing_extensions
 
 from beget_openapi_vps.apis.tags import TagValues
 from beget_openapi_vps.apis.tags.backup_service_api import BackupServiceApi
+from beget_openapi_vps.apis.tags.configurator_service_api import ConfiguratorServiceApi
 from beget_openapi_vps.apis.tags.manage_service_api import ManageServiceApi
 from beget_openapi_vps.apis.tags.marketplace_service_api import MarketplaceServiceApi
 from beget_openapi_vps.apis.tags.network_service_api import NetworkServiceApi
@@ -13,6 +14,7 @@ TagToApi = typing_extensions.TypedDict(
     'TagToApi',
     {
         TagValues.BACKUP_SERVICE: BackupServiceApi,
+        TagValues.CONFIGURATOR_SERVICE: ConfiguratorServiceApi,
         TagValues.MANAGE_SERVICE: ManageServiceApi,
         TagValues.MARKETPLACE_SERVICE: MarketplaceServiceApi,
         TagValues.NETWORK_SERVICE: NetworkServiceApi,
@@ -25,6 +27,7 @@ TagToApi = typing_extensions.TypedDict(
 tag_to_api = TagToApi(
     {
         TagValues.BACKUP_SERVICE: BackupServiceApi,
+        TagValues.CONFIGURATOR_SERVICE: ConfiguratorServiceApi,
         TagValues.MANAGE_SERVICE: ManageServiceApi,
         TagValues.MARKETPLACE_SERVICE: MarketplaceServiceApi,
         TagValues.NETWORK_SERVICE: NetworkServiceApi,

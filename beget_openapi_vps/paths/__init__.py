@@ -10,6 +10,8 @@ class PathValues(str, enum.Enum):
     V1_VPS_BACKUP = "/v1/vps/backup"
     V1_VPS_BACKUP_ORDERS = "/v1/vps/backup/orders"
     V1_VPS_CONFIGURATION = "/v1/vps/configuration"
+    V1_VPS_CONFIGURATOR_CALCULATION = "/v1/vps/configurator/calculation"
+    V1_VPS_CONFIGURATOR_INFO = "/v1/vps/configurator/info"
     V1_VPS_MARKETPLACE_SOFTWARE_LIST = "/v1/vps/marketplace/software/list"
     V1_VPS_NETWORK = "/v1/vps/network"
     V1_VPS_NETWORK_DETACH_IP_ADDRESS = "/v1/vps/network/detach/{ip_address}"

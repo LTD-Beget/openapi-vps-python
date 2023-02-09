@@ -5,6 +5,8 @@ from beget_openapi_vps.apis.paths.v1_vps_archive_id import V1VpsArchiveId
 from beget_openapi_vps.apis.paths.v1_vps_backup import V1VpsBackup
 from beget_openapi_vps.apis.paths.v1_vps_backup_orders import V1VpsBackupOrders
 from beget_openapi_vps.apis.paths.v1_vps_configuration import V1VpsConfiguration
+from beget_openapi_vps.apis.paths.v1_vps_configurator_calculation import V1VpsConfiguratorCalculation
+from beget_openapi_vps.apis.paths.v1_vps_configurator_info import V1VpsConfiguratorInfo
 from beget_openapi_vps.apis.paths.v1_vps_marketplace_software_list import V1VpsMarketplaceSoftwareList
 from beget_openapi_vps.apis.paths.v1_vps_network import V1VpsNetwork
 from beget_openapi_vps.apis.paths.v1_vps_network_detach_ip_address import V1VpsNetworkDetachIpAddress
@@ -60,6 +62,8 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_VPS_BACKUP: V1VpsBackup,
         PathValues.V1_VPS_BACKUP_ORDERS: V1VpsBackupOrders,
         PathValues.V1_VPS_CONFIGURATION: V1VpsConfiguration,
+        PathValues.V1_VPS_CONFIGURATOR_CALCULATION: V1VpsConfiguratorCalculation,
+        PathValues.V1_VPS_CONFIGURATOR_INFO: V1VpsConfiguratorInfo,
         PathValues.V1_VPS_MARKETPLACE_SOFTWARE_LIST: V1VpsMarketplaceSoftwareList,
         PathValues.V1_VPS_NETWORK: V1VpsNetwork,
         PathValues.V1_VPS_NETWORK_DETACH_IP_ADDRESS: V1VpsNetworkDetachIpAddress,
@@ -116,6 +120,8 @@ path_to_api = PathToApi(
         PathValues.V1_VPS_BACKUP: V1VpsBackup,
         PathValues.V1_VPS_BACKUP_ORDERS: V1VpsBackupOrders,
         PathValues.V1_VPS_CONFIGURATION: V1VpsConfiguration,
+        PathValues.V1_VPS_CONFIGURATOR_CALCULATION: V1VpsConfiguratorCalculation,
+        PathValues.V1_VPS_CONFIGURATOR_INFO: V1VpsConfiguratorInfo,
         PathValues.V1_VPS_MARKETPLACE_SOFTWARE_LIST: V1VpsMarketplaceSoftwareList,
         PathValues.V1_VPS_NETWORK: V1VpsNetwork,
         PathValues.V1_VPS_NETWORK_DETACH_IP_ADDRESS: V1VpsNetworkDetachIpAddress,

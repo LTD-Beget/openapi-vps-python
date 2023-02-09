@@ -7,6 +7,7 @@ import enum
 
 class TagValues(str, enum.Enum):
     BACKUP_SERVICE = "BackupService"
+    CONFIGURATOR_SERVICE = "ConfiguratorService"
     MANAGE_SERVICE = "ManageService"
     MARKETPLACE_SERVICE = "MarketplaceService"
     NETWORK_SERVICE = "NetworkService"

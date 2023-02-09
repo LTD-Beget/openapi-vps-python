@@ -12,6 +12,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **hostname** | str,  | str,  |  | [optional] 
 **description** | str,  | str,  |  | [optional] 
 **configuration_id** | str,  | str,  |  | [optional] 
+**configuration_params** | [**StructuresConfigurationParams**](StructuresConfigurationParams.md) | [**StructuresConfigurationParams**](StructuresConfigurationParams.md) |  | [optional] 
 **software** | [**ManageSoftwareInstallInfo**](ManageSoftwareInstallInfo.md) | [**ManageSoftwareInstallInfo**](ManageSoftwareInstallInfo.md) |  | [optional] 
 **snapshot_id** | str,  | str,  |  | [optional] 
 **[ssh_keys](#ssh_keys)** | list, tuple,  | tuple,  |  | [optional] 
