@@ -48,6 +48,8 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
         'params.disk_size': 1,
         'params.memory': 1,
         'vps_id': "vps_id_example",
+        'software_id': 1,
+        'snapshot_id': "snapshot_id_example",
     }
     try:
         api_response = api_instance.configurator_service_get_calculation(
@@ -76,6 +78,8 @@ params.cpu_count | ParamsCpuCountSchema | | optional
 params.disk_size | ParamsDiskSizeSchema | | optional
 params.memory | ParamsMemorySchema | | optional
 vps_id | VpsIdSchema | | optional
+software_id | SoftwareIdSchema | | optional
+snapshot_id | SnapshotIdSchema | | optional
 
 
 # ParamsCpuCountSchema
@@ -100,6 +104,20 @@ Input Type | Accessed Type | Description | Notes
 decimal.Decimal, int,  | decimal.Decimal,  |  | 
 
 # VpsIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# SoftwareIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | 
+
+# SnapshotIdSchema
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

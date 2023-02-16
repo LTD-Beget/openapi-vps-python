@@ -32,6 +32,8 @@ ParamsCpuCountSchema = schemas.IntSchema
 ParamsDiskSizeSchema = schemas.IntSchema
 ParamsMemorySchema = schemas.IntSchema
 VpsIdSchema = schemas.StrSchema
+SoftwareIdSchema = schemas.IntSchema
+SnapshotIdSchema = schemas.StrSchema
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -44,6 +46,8 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'params.disk_size': typing.Union[ParamsDiskSizeSchema, decimal.Decimal, int, ],
         'params.memory': typing.Union[ParamsMemorySchema, decimal.Decimal, int, ],
         'vps_id': typing.Union[VpsIdSchema, str, ],
+        'software_id': typing.Union[SoftwareIdSchema, decimal.Decimal, int, ],
+        'snapshot_id': typing.Union[SnapshotIdSchema, str, ],
     },
     total=False
 )
@@ -75,6 +79,18 @@ request_query_vps_id = api_client.QueryParameter(
     name="vps_id",
     style=api_client.ParameterStyle.FORM,
     schema=VpsIdSchema,
+    explode=True,
+)
+request_query_software_id = api_client.QueryParameter(
+    name="software_id",
+    style=api_client.ParameterStyle.FORM,
+    schema=SoftwareIdSchema,
+    explode=True,
+)
+request_query_snapshot_id = api_client.QueryParameter(
+    name="snapshot_id",
+    style=api_client.ParameterStyle.FORM,
+    schema=SnapshotIdSchema,
     explode=True,
 )
 SchemaFor200ResponseBodyApplicationJson = ConfiguratorGetCalculationResponse
@@ -159,6 +175,8 @@ class BaseApi(api_client.Api):
             request_query_params_disk_size,
             request_query_params_memory,
             request_query_vps_id,
+            request_query_software_id,
+            request_query_snapshot_id,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:
