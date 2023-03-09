@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**manage_service_detach_from_private_network**](#manage_service_detach_from_private_network) | **delete** /v1/vps/{id}/private-network/{network_id} | 
 [**manage_service_detach_ip_address**](#manage_service_detach_ip_address) | **delete** /v1/vps/network/detach/{ip_address} | 
 [**manage_service_detach_ssh_key**](#manage_service_detach_ssh_key) | **delete** /v1/vps/{id}/sshKey/{ssh_key_id} | 
+[**manage_service_disable_post_install_alert**](#manage_service_disable_post_install_alert) | **delete** /v1/vps/{id}/software/post-install-alert | 
 [**manage_service_get_available_configuration**](#manage_service_get_available_configuration) | **get** /v1/vps/configuration | 
 [**manage_service_get_file_manager_settings**](#manage_service_get_file_manager_settings) | **post** /v1/vps/{id}/fm | 
 [**manage_service_get_history**](#manage_service_get_history) | **get** /v1/vps/{id}/history | 
@@ -773,6 +774,7 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
                 address="address_example",
             )
         ],
+        link_slug="link_slug_example",
     )
     try:
         api_response = api_instance.manage_service_create_vps(
@@ -1125,6 +1127,102 @@ headers | Unset | headers were not defined |
 Type | Description  | Notes
 ------------- | ------------- | -------------
 [**ManageDetachSshKeyResponse**](../../models/ManageDetachSshKeyResponse.md) |  | 
+
+
+### Authorization
+
+[bearerAuth](../../../README.md#bearerAuth)
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **manage_service_disable_post_install_alert**
+<a name="manage_service_disable_post_install_alert"></a>
+> ManageDisablePostInstallAlertResponse manage_service_disable_post_install_alert(id)
+
+
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+```python
+import beget_openapi_vps
+from beget_openapi_vps.apis.tags import manage_service_api
+from beget_openapi_vps.model.manage_disable_post_install_alert_response import ManageDisablePostInstallAlertResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.beget.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = beget_openapi_vps.Configuration(
+    host = "https://api.beget.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = beget_openapi_vps.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+# Enter a context with an instance of the API client
+with beget_openapi_vps.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = manage_service_api.ManageServiceApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'id': "id_example",
+    }
+    try:
+        api_response = api_instance.manage_service_disable_post_install_alert(
+            path_params=path_params,
+        )
+        pprint(api_response)
+    except beget_openapi_vps.ApiException as e:
+        print("Exception when calling ManageServiceApi->manage_service_disable_post_install_alert: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+path_params | RequestPathParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+id | IdSchema | | 
+
+# IdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#manage_service_disable_post_install_alert.ApiResponseFor200) | OK
+
+#### manage_service_disable_post_install_alert.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ManageDisablePostInstallAlertResponse**](../../models/ManageDisablePostInstallAlertResponse.md) |  | 
 
 
 ### Authorization

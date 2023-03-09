@@ -52,6 +52,7 @@ from beget_openapi_vps.apis.paths.v1_vps_id_network_ip_address import V1VpsIdNet
 from beget_openapi_vps.apis.paths.v1_vps_id_password import V1VpsIdPassword
 from beget_openapi_vps.apis.paths.v1_vps_id_private_network_network_id import V1VpsIdPrivateNetworkNetworkId
 from beget_openapi_vps.apis.paths.v1_vps_id_software import V1VpsIdSoftware
+from beget_openapi_vps.apis.paths.v1_vps_id_software_post_install_alert import V1VpsIdSoftwarePostInstallAlert
 from beget_openapi_vps.apis.paths.v1_vps_id_ssh_access import V1VpsIdSshAccess
 from beget_openapi_vps.apis.paths.v1_vps_id_ssh_key_ssh_key_id import V1VpsIdSshKeySshKeyId
 
@@ -109,6 +110,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_VPS_ID_PASSWORD: V1VpsIdPassword,
         PathValues.V1_VPS_ID_PRIVATENETWORK_NETWORK_ID: V1VpsIdPrivateNetworkNetworkId,
         PathValues.V1_VPS_ID_SOFTWARE: V1VpsIdSoftware,
+        PathValues.V1_VPS_ID_SOFTWARE_POSTINSTALLALERT: V1VpsIdSoftwarePostInstallAlert,
         PathValues.V1_VPS_ID_SSH_ACCESS: V1VpsIdSshAccess,
         PathValues.V1_VPS_ID_SSH_KEY_SSH_KEY_ID: V1VpsIdSshKeySshKeyId,
     }
@@ -167,6 +169,7 @@ path_to_api = PathToApi(
         PathValues.V1_VPS_ID_PASSWORD: V1VpsIdPassword,
         PathValues.V1_VPS_ID_PRIVATENETWORK_NETWORK_ID: V1VpsIdPrivateNetworkNetworkId,
         PathValues.V1_VPS_ID_SOFTWARE: V1VpsIdSoftware,
+        PathValues.V1_VPS_ID_SOFTWARE_POSTINSTALLALERT: V1VpsIdSoftwarePostInstallAlert,
         PathValues.V1_VPS_ID_SSH_ACCESS: V1VpsIdSshAccess,
         PathValues.V1_VPS_ID_SSH_KEY_SSH_KEY_ID: V1VpsIdSshKeySshKeyId,
     }

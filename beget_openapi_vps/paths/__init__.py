@@ -57,5 +57,6 @@ class PathValues(str, enum.Enum):
     V1_VPS_ID_PASSWORD = "/v1/vps/{id}/password"
     V1_VPS_ID_PRIVATENETWORK_NETWORK_ID = "/v1/vps/{id}/private-network/{network_id}"
     V1_VPS_ID_SOFTWARE = "/v1/vps/{id}/software"
+    V1_VPS_ID_SOFTWARE_POSTINSTALLALERT = "/v1/vps/{id}/software/post-install-alert"
     V1_VPS_ID_SSH_ACCESS = "/v1/vps/{id}/ssh/access"
     V1_VPS_ID_SSH_KEY_SSH_KEY_ID = "/v1/vps/{id}/sshKey/{ssh_key_id}"
