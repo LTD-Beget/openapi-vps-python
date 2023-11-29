@@ -36,6 +36,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **software_domain** | str,  | str,  |  | [optional] 
 **software** | [**StructuresInstalledSoftwareInfo**](StructuresInstalledSoftwareInfo.md) | [**StructuresInstalledSoftwareInfo**](StructuresInstalledSoftwareInfo.md) |  | [optional] 
 **link_slug** | str,  | str,  |  | [optional] 
+**region** | str,  | str,  |  | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 # ssh_keys

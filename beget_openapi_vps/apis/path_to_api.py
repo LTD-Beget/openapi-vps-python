@@ -8,11 +8,13 @@ from beget_openapi_vps.apis.paths.v1_vps_configuration import V1VpsConfiguration
 from beget_openapi_vps.apis.paths.v1_vps_configurator_calculation import V1VpsConfiguratorCalculation
 from beget_openapi_vps.apis.paths.v1_vps_configurator_info import V1VpsConfiguratorInfo
 from beget_openapi_vps.apis.paths.v1_vps_marketplace_software_list import V1VpsMarketplaceSoftwareList
+from beget_openapi_vps.apis.paths.v1_vps_marketplace_software_name_version import V1VpsMarketplaceSoftwareNameVersion
 from beget_openapi_vps.apis.paths.v1_vps_network import V1VpsNetwork
 from beget_openapi_vps.apis.paths.v1_vps_network_detach_ip_address import V1VpsNetworkDetachIpAddress
 from beget_openapi_vps.apis.paths.v1_vps_network_ip_address import V1VpsNetworkIpAddress
 from beget_openapi_vps.apis.paths.v1_vps_private_network import V1VpsPrivateNetwork
 from beget_openapi_vps.apis.paths.v1_vps_private_network_network_id_suggested_address import V1VpsPrivateNetworkNetworkIdSuggestedAddress
+from beget_openapi_vps.apis.paths.v1_vps_region import V1VpsRegion
 from beget_openapi_vps.apis.paths.v1_vps_server import V1VpsServer
 from beget_openapi_vps.apis.paths.v1_vps_server_list import V1VpsServerList
 from beget_openapi_vps.apis.paths.v1_vps_server_statuses import V1VpsServerStatuses
@@ -31,6 +33,8 @@ from beget_openapi_vps.apis.paths.v1_vps_snapshot_calculator import V1VpsSnapsho
 from beget_openapi_vps.apis.paths.v1_vps_snapshot_restore import V1VpsSnapshotRestore
 from beget_openapi_vps.apis.paths.v1_vps_snapshot_id import V1VpsSnapshotId
 from beget_openapi_vps.apis.paths.v1_vps_snapshot_id_restore import V1VpsSnapshotIdRestore
+from beget_openapi_vps.apis.paths.v1_vps_software_license import V1VpsSoftwareLicense
+from beget_openapi_vps.apis.paths.v1_vps_software_license_vps_id import V1VpsSoftwareLicenseVpsId
 from beget_openapi_vps.apis.paths.v1_vps_software_requirements import V1VpsSoftwareRequirements
 from beget_openapi_vps.apis.paths.v1_vps_ssh_key import V1VpsSshKey
 from beget_openapi_vps.apis.paths.v1_vps_ssh_key_id import V1VpsSshKeyId
@@ -66,11 +70,13 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_VPS_CONFIGURATOR_CALCULATION: V1VpsConfiguratorCalculation,
         PathValues.V1_VPS_CONFIGURATOR_INFO: V1VpsConfiguratorInfo,
         PathValues.V1_VPS_MARKETPLACE_SOFTWARE_LIST: V1VpsMarketplaceSoftwareList,
+        PathValues.V1_VPS_MARKETPLACE_SOFTWARE_NAME_VERSION: V1VpsMarketplaceSoftwareNameVersion,
         PathValues.V1_VPS_NETWORK: V1VpsNetwork,
         PathValues.V1_VPS_NETWORK_DETACH_IP_ADDRESS: V1VpsNetworkDetachIpAddress,
         PathValues.V1_VPS_NETWORK_IP_ADDRESS: V1VpsNetworkIpAddress,
         PathValues.V1_VPS_PRIVATENETWORK: V1VpsPrivateNetwork,
         PathValues.V1_VPS_PRIVATENETWORK_NETWORK_ID_SUGGESTEDADDRESS: V1VpsPrivateNetworkNetworkIdSuggestedAddress,
+        PathValues.V1_VPS_REGION: V1VpsRegion,
         PathValues.V1_VPS_SERVER: V1VpsServer,
         PathValues.V1_VPS_SERVER_LIST: V1VpsServerList,
         PathValues.V1_VPS_SERVER_STATUSES: V1VpsServerStatuses,
@@ -89,6 +95,8 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_VPS_SNAPSHOT_RESTORE: V1VpsSnapshotRestore,
         PathValues.V1_VPS_SNAPSHOT_ID: V1VpsSnapshotId,
         PathValues.V1_VPS_SNAPSHOT_ID_RESTORE: V1VpsSnapshotIdRestore,
+        PathValues.V1_VPS_SOFTWARE_LICENSE: V1VpsSoftwareLicense,
+        PathValues.V1_VPS_SOFTWARE_LICENSE_VPS_ID: V1VpsSoftwareLicenseVpsId,
         PathValues.V1_VPS_SOFTWARE_REQUIREMENTS: V1VpsSoftwareRequirements,
         PathValues.V1_VPS_SSH_KEY: V1VpsSshKey,
         PathValues.V1_VPS_SSH_KEY_ID: V1VpsSshKeyId,
@@ -125,11 +133,13 @@ path_to_api = PathToApi(
         PathValues.V1_VPS_CONFIGURATOR_CALCULATION: V1VpsConfiguratorCalculation,
         PathValues.V1_VPS_CONFIGURATOR_INFO: V1VpsConfiguratorInfo,
         PathValues.V1_VPS_MARKETPLACE_SOFTWARE_LIST: V1VpsMarketplaceSoftwareList,
+        PathValues.V1_VPS_MARKETPLACE_SOFTWARE_NAME_VERSION: V1VpsMarketplaceSoftwareNameVersion,
         PathValues.V1_VPS_NETWORK: V1VpsNetwork,
         PathValues.V1_VPS_NETWORK_DETACH_IP_ADDRESS: V1VpsNetworkDetachIpAddress,
         PathValues.V1_VPS_NETWORK_IP_ADDRESS: V1VpsNetworkIpAddress,
         PathValues.V1_VPS_PRIVATENETWORK: V1VpsPrivateNetwork,
         PathValues.V1_VPS_PRIVATENETWORK_NETWORK_ID_SUGGESTEDADDRESS: V1VpsPrivateNetworkNetworkIdSuggestedAddress,
+        PathValues.V1_VPS_REGION: V1VpsRegion,
         PathValues.V1_VPS_SERVER: V1VpsServer,
         PathValues.V1_VPS_SERVER_LIST: V1VpsServerList,
         PathValues.V1_VPS_SERVER_STATUSES: V1VpsServerStatuses,
@@ -148,6 +158,8 @@ path_to_api = PathToApi(
         PathValues.V1_VPS_SNAPSHOT_RESTORE: V1VpsSnapshotRestore,
         PathValues.V1_VPS_SNAPSHOT_ID: V1VpsSnapshotId,
         PathValues.V1_VPS_SNAPSHOT_ID_RESTORE: V1VpsSnapshotIdRestore,
+        PathValues.V1_VPS_SOFTWARE_LICENSE: V1VpsSoftwareLicense,
+        PathValues.V1_VPS_SOFTWARE_LICENSE_VPS_ID: V1VpsSoftwareLicenseVpsId,
         PathValues.V1_VPS_SOFTWARE_REQUIREMENTS: V1VpsSoftwareRequirements,
         PathValues.V1_VPS_SSH_KEY: V1VpsSshKey,
         PathValues.V1_VPS_SSH_KEY_ID: V1VpsSshKeyId,

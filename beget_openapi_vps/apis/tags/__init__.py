@@ -12,5 +12,6 @@ class TagValues(str, enum.Enum):
     MARKETPLACE_SERVICE = "MarketplaceService"
     NETWORK_SERVICE = "NetworkService"
     SNAPSHOT_SERVICE = "SnapshotService"
+    SOFTWARE_LICENSE_SERVICE = "SoftwareLicenseService"
     SSH_KEY_SERVICE = "SshKeyService"
     STATISTIC_SERVICE = "StatisticService"

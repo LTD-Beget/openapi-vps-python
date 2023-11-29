@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 # **network_service_create_private_network**
 <a name="network_service_create_private_network"></a>
-> NetworkCreatePrivateNetworkResponse network_service_create_private_network()
+> NetworkCreatePrivateNetworkResponse network_service_create_private_network(network_create_private_network_request)
 
 
 
@@ -23,6 +23,7 @@ Method | HTTP request | Description
 ```python
 import beget_openapi_vps
 from beget_openapi_vps.apis.tags import network_service_api
+from beget_openapi_vps.model.network_create_private_network_request import NetworkCreatePrivateNetworkRequest
 from beget_openapi_vps.model.network_create_private_network_response import NetworkCreatePrivateNetworkResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.beget.com
@@ -45,15 +46,36 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = network_service_api.NetworkServiceApi(api_client)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    body = NetworkCreatePrivateNetworkRequest(
+        region="region_example",
+    )
     try:
-        api_response = api_instance.network_service_create_private_network()
+        api_response = api_instance.network_service_create_private_network(
+            body=body,
+        )
         pprint(api_response)
     except beget_openapi_vps.ApiException as e:
         print("Exception when calling NetworkServiceApi->network_service_create_private_network: %s\n" % e)
 ```
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+body | typing.Union[SchemaForRequestBodyApplicationJson] | required |
+content_type | str | optional, default is 'application/json' | Selects the schema and serialization of the request body
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### body
+
+# SchemaForRequestBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**NetworkCreatePrivateNetworkRequest**](../../models/NetworkCreatePrivateNetworkRequest.md) |  | 
+
 
 ### Return Types, Responses
 

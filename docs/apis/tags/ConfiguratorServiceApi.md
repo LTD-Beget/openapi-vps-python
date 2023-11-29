@@ -47,6 +47,7 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
         'params.cpu_count': 1,
         'params.disk_size': 1,
         'params.memory': 1,
+        'region': "region_example",
         'vps_id': "vps_id_example",
         'software_id': 1,
         'snapshot_id': "snapshot_id_example",
@@ -77,6 +78,7 @@ Name | Type | Description  | Notes
 params.cpu_count | ParamsCpuCountSchema | | optional
 params.disk_size | ParamsDiskSizeSchema | | optional
 params.memory | ParamsMemorySchema | | optional
+region | RegionSchema | | optional
 vps_id | VpsIdSchema | | optional
 software_id | SoftwareIdSchema | | optional
 snapshot_id | SnapshotIdSchema | | optional
@@ -102,6 +104,13 @@ decimal.Decimal, int,  | decimal.Decimal,  |  |
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 decimal.Decimal, int,  | decimal.Decimal,  |  | 
+
+# RegionSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
 
 # VpsIdSchema
 
@@ -184,15 +193,42 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = configurator_service_api.ConfiguratorServiceApi(api_client)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only optional values
+    query_params = {
+        'region': "region_example",
+    }
     try:
-        api_response = api_instance.configurator_service_get_configurator_info()
+        api_response = api_instance.configurator_service_get_configurator_info(
+            query_params=query_params,
+        )
         pprint(api_response)
     except beget_openapi_vps.ApiException as e:
         print("Exception when calling ConfiguratorServiceApi->configurator_service_get_configurator_info: %s\n" % e)
 ```
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+region | RegionSchema | | optional
+
+
+# RegionSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
 
 ### Return Types, Responses
 

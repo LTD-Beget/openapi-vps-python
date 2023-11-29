@@ -31,6 +31,7 @@ from beget_openapi_vps.model.configurator_get_calculation_response import Config
 ParamsCpuCountSchema = schemas.IntSchema
 ParamsDiskSizeSchema = schemas.IntSchema
 ParamsMemorySchema = schemas.IntSchema
+RegionSchema = schemas.StrSchema
 VpsIdSchema = schemas.StrSchema
 SoftwareIdSchema = schemas.IntSchema
 SnapshotIdSchema = schemas.StrSchema
@@ -45,6 +46,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'params.cpu_count': typing.Union[ParamsCpuCountSchema, decimal.Decimal, int, ],
         'params.disk_size': typing.Union[ParamsDiskSizeSchema, decimal.Decimal, int, ],
         'params.memory': typing.Union[ParamsMemorySchema, decimal.Decimal, int, ],
+        'region': typing.Union[RegionSchema, str, ],
         'vps_id': typing.Union[VpsIdSchema, str, ],
         'software_id': typing.Union[SoftwareIdSchema, decimal.Decimal, int, ],
         'snapshot_id': typing.Union[SnapshotIdSchema, str, ],
@@ -73,6 +75,12 @@ request_query_params_memory = api_client.QueryParameter(
     name="params.memory",
     style=api_client.ParameterStyle.FORM,
     schema=ParamsMemorySchema,
+    explode=True,
+)
+request_query_region = api_client.QueryParameter(
+    name="region",
+    style=api_client.ParameterStyle.FORM,
+    schema=RegionSchema,
     explode=True,
 )
 request_query_vps_id = api_client.QueryParameter(
@@ -174,6 +182,7 @@ class BaseApi(api_client.Api):
             request_query_params_cpu_count,
             request_query_params_disk_size,
             request_query_params_memory,
+            request_query_region,
             request_query_vps_id,
             request_query_software_id,
             request_query_snapshot_id,

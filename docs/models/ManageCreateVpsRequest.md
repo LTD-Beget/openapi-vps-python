@@ -20,6 +20,8 @@ Key | Input Type | Accessed Type | Description | Notes
 **beget_ssh_access_allowed** | bool,  | BoolClass,  |  | [optional] 
 **[private_networks](#private_networks)** | list, tuple,  | tuple,  |  | [optional] 
 **link_slug** | str,  | str,  |  | [optional] 
+**license_id** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] 
+**region** | str,  | str,  |  | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 # ssh_keys
