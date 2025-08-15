@@ -764,6 +764,7 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
             ),
         ),
         snapshot_id="snapshot_id_example",
+        image_id="image_id_example",
         ssh_keys=[
             1
         ],
@@ -778,6 +779,7 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
         link_slug="link_slug_example",
         license_id=1,
         region="region_example",
+        configuration_group="configuration_group_example",
     )
     try:
         api_response = api_instance.manage_service_create_vps(

@@ -8,7 +8,7 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
-**code** | str,  | str,  |  | [optional] must be one of ["INTERNAL_ERROR", "INVALID_STATE", "SERVICE_DISABLED", "INVALID_CONFIGURATION", "INVALID_SECURITY_CONFIGURATION", "INVALID_PASSWORD", "SOFTWARE_INVALID_TYPE", "SOFTWARE_NOT_ENOUGH_RESOURCES", "INVALID_PARAMS", "SOFTWARE_VARIABLE_REQUIRED", "SOFTWARE_VARIABLE_INVALID", "BLACKLISTED_PASSWORD", "INSUFFICIENT_FUNDS", ] 
+**code** | str,  | str,  |  | [optional] must be one of ["INTERNAL_ERROR", "INVALID_STATE", "SERVICE_DISABLED", "INVALID_CONFIGURATION", "INVALID_SECURITY_CONFIGURATION", "INVALID_PASSWORD", "SOFTWARE_INVALID_TYPE", "SOFTWARE_NOT_ENOUGH_RESOURCES", "INVALID_PARAMS", "SOFTWARE_VARIABLE_REQUIRED", "SOFTWARE_VARIABLE_INVALID", "BLACKLISTED_PASSWORD", "INSUFFICIENT_FUNDS", "NOT_ENOUGH_SPACE", ] 
 **message** | str,  | str,  |  | [optional] 
 **variable_error** | [**ManageReinstallResponseErrorSoftwareVariableError**](ManageReinstallResponseErrorSoftwareVariableError.md) | [**ManageReinstallResponseErrorSoftwareVariableError**](ManageReinstallResponseErrorSoftwareVariableError.md) |  | [optional] 
 **insufficient_funds_error** | [**ManageReinstallResponseErrorInsufficientFundsError**](ManageReinstallResponseErrorInsufficientFundsError.md) | [**ManageReinstallResponseErrorInsufficientFundsError**](ManageReinstallResponseErrorInsufficientFundsError.md) |  | [optional] 

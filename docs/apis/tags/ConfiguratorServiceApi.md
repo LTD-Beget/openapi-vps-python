@@ -51,6 +51,8 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
         'vps_id': "vps_id_example",
         'software_id': 1,
         'snapshot_id': "snapshot_id_example",
+        'image_id': "image_id_example",
+        'configuration_group': "configuration_group_example",
     }
     try:
         api_response = api_instance.configurator_service_get_calculation(
@@ -82,6 +84,8 @@ region | RegionSchema | | optional
 vps_id | VpsIdSchema | | optional
 software_id | SoftwareIdSchema | | optional
 snapshot_id | SnapshotIdSchema | | optional
+image_id | ImageIdSchema | | optional
+configuration_group | ConfigurationGroupSchema | | optional
 
 
 # ParamsCpuCountSchema
@@ -127,6 +131,20 @@ Input Type | Accessed Type | Description | Notes
 decimal.Decimal, int,  | decimal.Decimal,  |  | 
 
 # SnapshotIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# ImageIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# ConfigurationGroupSchema
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -196,6 +214,7 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     # example passing only optional values
     query_params = {
         'region': "region_example",
+        'configuration_group': "configuration_group_example",
     }
     try:
         api_response = api_instance.configurator_service_get_configurator_info(
@@ -221,9 +240,17 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 region | RegionSchema | | optional
+configuration_group | ConfigurationGroupSchema | | optional
 
 
 # RegionSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# ConfigurationGroupSchema
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

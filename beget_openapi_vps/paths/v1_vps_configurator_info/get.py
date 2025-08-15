@@ -31,6 +31,7 @@ from . import path
 
 # Query params
 RegionSchema = schemas.StrSchema
+ConfigurationGroupSchema = schemas.StrSchema
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -40,6 +41,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
     'RequestOptionalQueryParams',
     {
         'region': typing.Union[RegionSchema, str, ],
+        'configuration_group': typing.Union[ConfigurationGroupSchema, str, ],
     },
     total=False
 )
@@ -53,6 +55,12 @@ request_query_region = api_client.QueryParameter(
     name="region",
     style=api_client.ParameterStyle.FORM,
     schema=RegionSchema,
+    explode=True,
+)
+request_query_configuration_group = api_client.QueryParameter(
+    name="configuration_group",
+    style=api_client.ParameterStyle.FORM,
+    schema=ConfigurationGroupSchema,
     explode=True,
 )
 _auth = [
@@ -140,6 +148,7 @@ class BaseApi(api_client.Api):
         prefix_separator_iterator = None
         for parameter in (
             request_query_region,
+            request_query_configuration_group,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:

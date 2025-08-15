@@ -35,6 +35,8 @@ RegionSchema = schemas.StrSchema
 VpsIdSchema = schemas.StrSchema
 SoftwareIdSchema = schemas.IntSchema
 SnapshotIdSchema = schemas.StrSchema
+ImageIdSchema = schemas.StrSchema
+ConfigurationGroupSchema = schemas.StrSchema
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -50,6 +52,8 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'vps_id': typing.Union[VpsIdSchema, str, ],
         'software_id': typing.Union[SoftwareIdSchema, decimal.Decimal, int, ],
         'snapshot_id': typing.Union[SnapshotIdSchema, str, ],
+        'image_id': typing.Union[ImageIdSchema, str, ],
+        'configuration_group': typing.Union[ConfigurationGroupSchema, str, ],
     },
     total=False
 )
@@ -99,6 +103,18 @@ request_query_snapshot_id = api_client.QueryParameter(
     name="snapshot_id",
     style=api_client.ParameterStyle.FORM,
     schema=SnapshotIdSchema,
+    explode=True,
+)
+request_query_image_id = api_client.QueryParameter(
+    name="image_id",
+    style=api_client.ParameterStyle.FORM,
+    schema=ImageIdSchema,
+    explode=True,
+)
+request_query_configuration_group = api_client.QueryParameter(
+    name="configuration_group",
+    style=api_client.ParameterStyle.FORM,
+    schema=ConfigurationGroupSchema,
     explode=True,
 )
 SchemaFor200ResponseBodyApplicationJson = ConfiguratorGetCalculationResponse
@@ -186,6 +202,8 @@ class BaseApi(api_client.Api):
             request_query_vps_id,
             request_query_software_id,
             request_query_snapshot_id,
+            request_query_image_id,
+            request_query_configuration_group,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:
