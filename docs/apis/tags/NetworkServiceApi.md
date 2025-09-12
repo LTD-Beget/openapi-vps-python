@@ -211,6 +211,7 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     body = NetworkOrderIpAddressRequest(
         id="id_example",
+        region="region_example",
     )
     try:
         api_response = api_instance.network_service_order_ip_address(
