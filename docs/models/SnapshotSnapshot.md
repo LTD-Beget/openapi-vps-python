@@ -11,6 +11,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **id** | str,  | str,  |  | [optional] 
 **vps_id** | str,  | str,  |  | [optional] 
 **vps_name** | str,  | str,  |  | [optional] 
+**vps_exists** | bool,  | BoolClass,  |  | [optional] 
 **date_create** | str,  | str,  |  | [optional] 
 **size** | str,  | str,  |  | [optional] 
 **status** | str,  | str,  |  | [optional] must be one of ["CREATING", "DONE", "RESTORING", "DELETED", ] 

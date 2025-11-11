@@ -13,6 +13,7 @@ from beget_openapi_vps.apis.paths.v1_vps_network import V1VpsNetwork
 from beget_openapi_vps.apis.paths.v1_vps_network_detach_ip_address import V1VpsNetworkDetachIpAddress
 from beget_openapi_vps.apis.paths.v1_vps_network_ip_address import V1VpsNetworkIpAddress
 from beget_openapi_vps.apis.paths.v1_vps_private_network import V1VpsPrivateNetwork
+from beget_openapi_vps.apis.paths.v1_vps_private_network_network_id import V1VpsPrivateNetworkNetworkId
 from beget_openapi_vps.apis.paths.v1_vps_private_network_network_id_suggested_address import V1VpsPrivateNetworkNetworkIdSuggestedAddress
 from beget_openapi_vps.apis.paths.v1_vps_region import V1VpsRegion
 from beget_openapi_vps.apis.paths.v1_vps_server import V1VpsServer
@@ -21,6 +22,8 @@ from beget_openapi_vps.apis.paths.v1_vps_server_statuses import V1VpsServerStatu
 from beget_openapi_vps.apis.paths.v1_vps_server_id import V1VpsServerId
 from beget_openapi_vps.apis.paths.v1_vps_server_id_configuration import V1VpsServerIdConfiguration
 from beget_openapi_vps.apis.paths.v1_vps_server_id_info import V1VpsServerIdInfo
+from beget_openapi_vps.apis.paths.v1_vps_server_id_pin import V1VpsServerIdPin
+from beget_openapi_vps.apis.paths.v1_vps_server_id_project import V1VpsServerIdProject
 from beget_openapi_vps.apis.paths.v1_vps_server_id_reboot import V1VpsServerIdReboot
 from beget_openapi_vps.apis.paths.v1_vps_server_id_reinstall import V1VpsServerIdReinstall
 from beget_openapi_vps.apis.paths.v1_vps_server_id_remove import V1VpsServerIdRemove
@@ -75,6 +78,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_VPS_NETWORK_DETACH_IP_ADDRESS: V1VpsNetworkDetachIpAddress,
         PathValues.V1_VPS_NETWORK_IP_ADDRESS: V1VpsNetworkIpAddress,
         PathValues.V1_VPS_PRIVATENETWORK: V1VpsPrivateNetwork,
+        PathValues.V1_VPS_PRIVATENETWORK_NETWORK_ID: V1VpsPrivateNetworkNetworkId,
         PathValues.V1_VPS_PRIVATENETWORK_NETWORK_ID_SUGGESTEDADDRESS: V1VpsPrivateNetworkNetworkIdSuggestedAddress,
         PathValues.V1_VPS_REGION: V1VpsRegion,
         PathValues.V1_VPS_SERVER: V1VpsServer,
@@ -83,6 +87,8 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V1_VPS_SERVER_ID: V1VpsServerId,
         PathValues.V1_VPS_SERVER_ID_CONFIGURATION: V1VpsServerIdConfiguration,
         PathValues.V1_VPS_SERVER_ID_INFO: V1VpsServerIdInfo,
+        PathValues.V1_VPS_SERVER_ID_PIN: V1VpsServerIdPin,
+        PathValues.V1_VPS_SERVER_ID_PROJECT: V1VpsServerIdProject,
         PathValues.V1_VPS_SERVER_ID_REBOOT: V1VpsServerIdReboot,
         PathValues.V1_VPS_SERVER_ID_REINSTALL: V1VpsServerIdReinstall,
         PathValues.V1_VPS_SERVER_ID_REMOVE: V1VpsServerIdRemove,
@@ -138,6 +144,7 @@ path_to_api = PathToApi(
         PathValues.V1_VPS_NETWORK_DETACH_IP_ADDRESS: V1VpsNetworkDetachIpAddress,
         PathValues.V1_VPS_NETWORK_IP_ADDRESS: V1VpsNetworkIpAddress,
         PathValues.V1_VPS_PRIVATENETWORK: V1VpsPrivateNetwork,
+        PathValues.V1_VPS_PRIVATENETWORK_NETWORK_ID: V1VpsPrivateNetworkNetworkId,
         PathValues.V1_VPS_PRIVATENETWORK_NETWORK_ID_SUGGESTEDADDRESS: V1VpsPrivateNetworkNetworkIdSuggestedAddress,
         PathValues.V1_VPS_REGION: V1VpsRegion,
         PathValues.V1_VPS_SERVER: V1VpsServer,
@@ -146,6 +153,8 @@ path_to_api = PathToApi(
         PathValues.V1_VPS_SERVER_ID: V1VpsServerId,
         PathValues.V1_VPS_SERVER_ID_CONFIGURATION: V1VpsServerIdConfiguration,
         PathValues.V1_VPS_SERVER_ID_INFO: V1VpsServerIdInfo,
+        PathValues.V1_VPS_SERVER_ID_PIN: V1VpsServerIdPin,
+        PathValues.V1_VPS_SERVER_ID_PROJECT: V1VpsServerIdProject,
         PathValues.V1_VPS_SERVER_ID_REBOOT: V1VpsServerIdReboot,
         PathValues.V1_VPS_SERVER_ID_REINSTALL: V1VpsServerIdReinstall,
         PathValues.V1_VPS_SERVER_ID_REMOVE: V1VpsServerIdRemove,

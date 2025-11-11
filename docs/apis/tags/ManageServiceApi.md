@@ -8,7 +8,9 @@ Method | HTTP request | Description
 [**manage_service_attach_ip_address**](#manage_service_attach_ip_address) | **post** /v1/vps/{id}/network/{ip_address} | 
 [**manage_service_attach_ssh_key**](#manage_service_attach_ssh_key) | **post** /v1/vps/{id}/sshKey/{ssh_key_id} | 
 [**manage_service_attach_to_private_network**](#manage_service_attach_to_private_network) | **post** /v1/vps/{id}/private-network/{network_id} | 
+[**manage_service_bind_project**](#manage_service_bind_project) | **put** /v1/vps/server/{id}/project | 
 [**manage_service_change_configuration**](#manage_service_change_configuration) | **put** /v1/vps/server/{id}/configuration | 
+[**manage_service_change_pinned**](#manage_service_change_pinned) | **put** /v1/vps/server/{id}/pin | 
 [**manage_service_change_ssh_access**](#manage_service_change_ssh_access) | **put** /v1/vps/{id}/ssh/access | 
 [**manage_service_check_software_requirements**](#manage_service_check_software_requirements) | **post** /v1/vps/software/requirements | 
 [**manage_service_create_vps**](#manage_service_create_vps) | **post** /v1/vps/server | 
@@ -385,6 +387,118 @@ Type | Description  | Notes
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
+# **manage_service_bind_project**
+<a name="manage_service_bind_project"></a>
+> ManageBindProjectResponse manage_service_bind_project(idmanage_bind_project_request)
+
+
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+```python
+import beget_openapi_vps
+from beget_openapi_vps.apis.tags import manage_service_api
+from beget_openapi_vps.model.manage_bind_project_request import ManageBindProjectRequest
+from beget_openapi_vps.model.manage_bind_project_response import ManageBindProjectResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.beget.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = beget_openapi_vps.Configuration(
+    host = "https://api.beget.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = beget_openapi_vps.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+# Enter a context with an instance of the API client
+with beget_openapi_vps.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = manage_service_api.ManageServiceApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'id': "id_example",
+    }
+    body = ManageBindProjectRequest(
+        id="id_example",
+        project_id="project_id_example",
+    )
+    try:
+        api_response = api_instance.manage_service_bind_project(
+            path_params=path_params,
+            body=body,
+        )
+        pprint(api_response)
+    except beget_openapi_vps.ApiException as e:
+        print("Exception when calling ManageServiceApi->manage_service_bind_project: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+body | typing.Union[SchemaForRequestBodyApplicationJson] | required |
+path_params | RequestPathParams | |
+content_type | str | optional, default is 'application/json' | Selects the schema and serialization of the request body
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### body
+
+# SchemaForRequestBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ManageBindProjectRequest**](../../models/ManageBindProjectRequest.md) |  | 
+
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+id | IdSchema | | 
+
+# IdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#manage_service_bind_project.ApiResponseFor200) | OK
+
+#### manage_service_bind_project.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ManageBindProjectResponse**](../../models/ManageBindProjectResponse.md) |  | 
+
+
+### Authorization
+
+[bearerAuth](../../../README.md#bearerAuth)
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
 # **manage_service_change_configuration**
 <a name="manage_service_change_configuration"></a>
 > ManageChangeConfigurationResponse manage_service_change_configuration(idmanage_change_configuration_request)
@@ -494,6 +608,118 @@ headers | Unset | headers were not defined |
 Type | Description  | Notes
 ------------- | ------------- | -------------
 [**ManageChangeConfigurationResponse**](../../models/ManageChangeConfigurationResponse.md) |  | 
+
+
+### Authorization
+
+[bearerAuth](../../../README.md#bearerAuth)
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **manage_service_change_pinned**
+<a name="manage_service_change_pinned"></a>
+> ManageChangePinnedResponse manage_service_change_pinned(idmanage_change_pinned_request)
+
+
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+```python
+import beget_openapi_vps
+from beget_openapi_vps.apis.tags import manage_service_api
+from beget_openapi_vps.model.manage_change_pinned_request import ManageChangePinnedRequest
+from beget_openapi_vps.model.manage_change_pinned_response import ManageChangePinnedResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.beget.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = beget_openapi_vps.Configuration(
+    host = "https://api.beget.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = beget_openapi_vps.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+# Enter a context with an instance of the API client
+with beget_openapi_vps.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = manage_service_api.ManageServiceApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'id': "id_example",
+    }
+    body = ManageChangePinnedRequest(
+        id="id_example",
+        ui_pinned=True,
+    )
+    try:
+        api_response = api_instance.manage_service_change_pinned(
+            path_params=path_params,
+            body=body,
+        )
+        pprint(api_response)
+    except beget_openapi_vps.ApiException as e:
+        print("Exception when calling ManageServiceApi->manage_service_change_pinned: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+body | typing.Union[SchemaForRequestBodyApplicationJson] | required |
+path_params | RequestPathParams | |
+content_type | str | optional, default is 'application/json' | Selects the schema and serialization of the request body
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### body
+
+# SchemaForRequestBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ManageChangePinnedRequest**](../../models/ManageChangePinnedRequest.md) |  | 
+
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+id | IdSchema | | 
+
+# IdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#manage_service_change_pinned.ApiResponseFor200) | OK
+
+#### manage_service_change_pinned.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ManageChangePinnedResponse**](../../models/ManageChangePinnedResponse.md) |  | 
 
 
 ### Authorization
@@ -780,6 +1006,8 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
         license_id=1,
         region="region_example",
         configuration_group="configuration_group_example",
+        ui_pinned=True,
+        project_id="project_id_example",
     )
     try:
         api_response = api_instance.manage_service_create_vps(
@@ -1724,15 +1952,69 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = manage_service_api.ManageServiceApi(api_client)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only optional values
+    query_params = {
+        'offset': 1,
+        'limit': 1,
+        'filter': "filter_example",
+        'sort': "sort_example",
+    }
     try:
-        api_response = api_instance.manage_service_get_list()
+        api_response = api_instance.manage_service_get_list(
+            query_params=query_params,
+        )
         pprint(api_response)
     except beget_openapi_vps.ApiException as e:
         print("Exception when calling ManageServiceApi->manage_service_get_list: %s\n" % e)
 ```
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+offset | OffsetSchema | | optional
+limit | LimitSchema | | optional
+filter | FilterSchema | | optional
+sort | SortSchema | | optional
+
+
+# OffsetSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | 
+
+# LimitSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | 
+
+# FilterSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# SortSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
 
 ### Return Types, Responses
 
@@ -2802,9 +3084,28 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     path_params = {
         'id': "id_example",
     }
+    query_params = {
+    }
     try:
         api_response = api_instance.manage_service_stop_vps(
             path_params=path_params,
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except beget_openapi_vps.ApiException as e:
+        print("Exception when calling ManageServiceApi->manage_service_stop_vps: %s\n" % e)
+
+    # example passing only optional values
+    path_params = {
+        'id': "id_example",
+    }
+    query_params = {
+        'force': True,
+    }
+    try:
+        api_response = api_instance.manage_service_stop_vps(
+            path_params=path_params,
+            query_params=query_params,
         )
         pprint(api_response)
     except beget_openapi_vps.ApiException as e:
@@ -2814,11 +3115,27 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
 path_params | RequestPathParams | |
 accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+force | ForceSchema | | optional
+
+
+# ForceSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+bool,  | BoolClass,  |  | 
 
 ### path_params
 #### RequestPathParams

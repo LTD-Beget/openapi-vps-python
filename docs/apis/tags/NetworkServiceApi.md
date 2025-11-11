@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**network_service_get_network_info**](#network_service_get_network_info) | **get** /v1/vps/network | 
 [**network_service_order_ip_address**](#network_service_order_ip_address) | **post** /v1/vps/network | 
 [**network_service_remove_ip_address**](#network_service_remove_ip_address) | **delete** /v1/vps/network/{ip_address} | 
+[**network_service_remove_private_network**](#network_service_remove_private_network) | **delete** /v1/vps/private-network/{network_id} | 
 [**network_service_suggest_private_address**](#network_service_suggest_private_address) | **post** /v1/vps/private-network/{network_id}/suggested-address | 
 
 # **network_service_create_private_network**
@@ -137,15 +138,42 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = network_service_api.NetworkServiceApi(api_client)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only optional values
+    query_params = {
+        'filter': "filter_example",
+    }
     try:
-        api_response = api_instance.network_service_get_network_info()
+        api_response = api_instance.network_service_get_network_info(
+            query_params=query_params,
+        )
         pprint(api_response)
     except beget_openapi_vps.ApiException as e:
         print("Exception when calling NetworkServiceApi->network_service_get_network_info: %s\n" % e)
 ```
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+filter | FilterSchema | | optional
+
+
+# FilterSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
 
 ### Return Types, Responses
 
@@ -354,6 +382,102 @@ headers | Unset | headers were not defined |
 Type | Description  | Notes
 ------------- | ------------- | -------------
 [**NetworkRemoveIpAddressResponse**](../../models/NetworkRemoveIpAddressResponse.md) |  | 
+
+
+### Authorization
+
+[bearerAuth](../../../README.md#bearerAuth)
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **network_service_remove_private_network**
+<a name="network_service_remove_private_network"></a>
+> NetworkRemovePrivateNetworkResponse network_service_remove_private_network(network_id)
+
+
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+```python
+import beget_openapi_vps
+from beget_openapi_vps.apis.tags import network_service_api
+from beget_openapi_vps.model.network_remove_private_network_response import NetworkRemovePrivateNetworkResponse
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.beget.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = beget_openapi_vps.Configuration(
+    host = "https://api.beget.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = beget_openapi_vps.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+# Enter a context with an instance of the API client
+with beget_openapi_vps.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = network_service_api.NetworkServiceApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'network_id': "network_id_example",
+    }
+    try:
+        api_response = api_instance.network_service_remove_private_network(
+            path_params=path_params,
+        )
+        pprint(api_response)
+    except beget_openapi_vps.ApiException as e:
+        print("Exception when calling NetworkServiceApi->network_service_remove_private_network: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+path_params | RequestPathParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+network_id | NetworkIdSchema | | 
+
+# NetworkIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#network_service_remove_private_network.ApiResponseFor200) | OK
+
+#### network_service_remove_private_network.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**NetworkRemovePrivateNetworkResponse**](../../models/NetworkRemovePrivateNetworkResponse.md) |  | 
 
 
 ### Authorization
