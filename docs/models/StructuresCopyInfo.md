@@ -9,9 +9,8 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **id** | str,  | str,  |  | [optional] 
-**vps_id** | str,  | str,  |  | [optional] 
-**vps_name** | str,  | str,  |  | [optional] 
 **items** | str,  | str,  |  | [optional] 
+**vps_name** | str,  | str,  |  | [optional] 
 **size** | str,  | str,  |  | [optional] 
 **region** | str,  | str,  |  | [optional] 
 **configuration** | [**StructuresCopyInfoConfiguration**](StructuresCopyInfoConfiguration.md) | [**StructuresCopyInfoConfiguration**](StructuresCopyInfoConfiguration.md) |  | [optional] 

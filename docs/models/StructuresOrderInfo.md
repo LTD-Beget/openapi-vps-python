@@ -9,7 +9,7 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **id** | str,  | str,  |  | [optional] 
-**vps_id** | str,  | str,  |  | [optional] 
+**items** | str,  | str,  |  | [optional] 
 **vps_name** | str,  | str,  |  | [optional] 
 **type** | str,  | str,  |  | [optional] must be one of ["DOWNLOAD", "RESTORE", ] 
 **date_create** | str,  | str,  |  | [optional] 
