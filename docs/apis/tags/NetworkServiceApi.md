@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.network_service_api.NetworkServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**network_service_suggest_private_address**](#network_service_suggest_private_address) | **post** /v1/vps/private-network/{network_id}/suggested-address | 
 
 # **network_service_create_private_network**
-<a name="network_service_create_private_network"></a>
+<a id="network_service_create_private_network"></a>
 > NetworkCreatePrivateNetworkResponse network_service_create_private_network(network_create_private_network_request)
 
 
@@ -105,7 +105,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **network_service_get_network_info**
-<a name="network_service_get_network_info"></a>
+<a id="network_service_get_network_info"></a>
 > NetworkGetNetworkInfoResponse network_service_get_network_info()
 
 
@@ -202,7 +202,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **network_service_order_ip_address**
-<a name="network_service_order_ip_address"></a>
+<a id="network_service_order_ip_address"></a>
 > NetworkOrderIpAddressResponse network_service_order_ip_address(network_order_ip_address_request)
 
 
@@ -295,7 +295,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **network_service_remove_ip_address**
-<a name="network_service_remove_ip_address"></a>
+<a id="network_service_remove_ip_address"></a>
 > NetworkRemoveIpAddressResponse network_service_remove_ip_address(ip_address)
 
 
@@ -391,7 +391,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **network_service_remove_private_network**
-<a name="network_service_remove_private_network"></a>
+<a id="network_service_remove_private_network"></a>
 > NetworkRemovePrivateNetworkResponse network_service_remove_private_network(network_id)
 
 
@@ -487,7 +487,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **network_service_suggest_private_address**
-<a name="network_service_suggest_private_address"></a>
+<a id="network_service_suggest_private_address"></a>
 > NetworkSuggestPrivateAddressResponse network_service_suggest_private_address(network_idnetwork_suggest_private_address_request)
 
 

@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.ssh_key_service_api.SshKeyServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**ssh_key_service_update**](#ssh_key_service_update) | **put** /v1/vps/sshKey/{id} | 
 
 # **ssh_key_service_add**
-<a name="ssh_key_service_add"></a>
+<a id="ssh_key_service_add"></a>
 > SshKeyAddResponse ssh_key_service_add(ssh_key_add_request)
 
 
@@ -104,7 +104,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **ssh_key_service_get_all**
-<a name="ssh_key_service_get_all"></a>
+<a id="ssh_key_service_get_all"></a>
 > SshKeyGetAllResponse ssh_key_service_get_all()
 
 
@@ -174,7 +174,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **ssh_key_service_remove**
-<a name="ssh_key_service_remove"></a>
+<a id="ssh_key_service_remove"></a>
 > SshKeyRemoveResponse ssh_key_service_remove(id)
 
 
@@ -305,7 +305,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **ssh_key_service_update**
-<a name="ssh_key_service_update"></a>
+<a id="ssh_key_service_update"></a>
 > SshKeyUpdateResponse ssh_key_service_update(idssh_key_update_request)
 
 

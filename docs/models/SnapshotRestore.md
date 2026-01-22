@@ -9,7 +9,8 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **id** | str,  | str,  |  | [optional] 
-**items** | [**SnapshotSnapshot**](SnapshotSnapshot.md) | [**SnapshotSnapshot**](SnapshotSnapshot.md) |  | [optional] 
+**snapshot** | [**SnapshotSnapshot**](SnapshotSnapshot.md) | [**SnapshotSnapshot**](SnapshotSnapshot.md) |  | [optional] 
+**vps_id** | str,  | str,  |  | [optional] 
 **vps_name** | str,  | str,  |  | [optional] 
 **target_type** | str,  | str,  |  | [optional] must be one of ["EXISTING_VPS", "NEW_VPS", ] 
 **date_create** | str,  | str,  |  | [optional] 

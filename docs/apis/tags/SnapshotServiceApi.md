@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.snapshot_service_api.SnapshotServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**snapshot_service_restore**](#snapshot_service_restore) | **post** /v1/vps/snapshot/{id}/restore | 
 
 # **snapshot_service_create**
-<a name="snapshot_service_create"></a>
+<a id="snapshot_service_create"></a>
 > SnapshotCreateResponse snapshot_service_create(snapshot_create_request)
 
 
@@ -108,7 +108,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **snapshot_service_create_calculator**
-<a name="snapshot_service_create_calculator"></a>
+<a id="snapshot_service_create_calculator"></a>
 > SnapshotCreateCalculatorResponse snapshot_service_create_calculator(snapshot_create_calculator_request)
 
 
@@ -200,7 +200,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **snapshot_service_edit**
-<a name="snapshot_service_edit"></a>
+<a id="snapshot_service_edit"></a>
 > SnapshotEditResponse snapshot_service_edit(idsnapshot_edit_request)
 
 
@@ -312,7 +312,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **snapshot_service_get_all**
-<a name="snapshot_service_get_all"></a>
+<a id="snapshot_service_get_all"></a>
 > SnapshotGetAllResponse snapshot_service_get_all()
 
 
@@ -382,7 +382,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **snapshot_service_get_all_restores**
-<a name="snapshot_service_get_all_restores"></a>
+<a id="snapshot_service_get_all_restores"></a>
 > SnapshotGetAllRestoresResponse snapshot_service_get_all_restores()
 
 
@@ -479,7 +479,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **snapshot_service_remove**
-<a name="snapshot_service_remove"></a>
+<a id="snapshot_service_remove"></a>
 > SnapshotRemoveResponse snapshot_service_remove(id)
 
 
@@ -575,7 +575,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **snapshot_service_restore**
-<a name="snapshot_service_restore"></a>
+<a id="snapshot_service_restore"></a>
 > SnapshotRestoreResponse snapshot_service_restore(idsnapshot_restore_request)
 
 

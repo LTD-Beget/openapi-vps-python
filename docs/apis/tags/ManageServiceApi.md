@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.manage_service_api.ManageServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -40,7 +40,7 @@ Method | HTTP request | Description
 [**manage_service_update_info**](#manage_service_update_info) | **put** /v1/vps/server/{id}/info | 
 
 # **manage_service_attach_ip_address**
-<a name="manage_service_attach_ip_address"></a>
+<a id="manage_service_attach_ip_address"></a>
 > ManageAttachIpAddressResponse manage_service_attach_ip_address(idip_addressmanage_attach_ip_address_request)
 
 
@@ -161,7 +161,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_attach_ssh_key**
-<a name="manage_service_attach_ssh_key"></a>
+<a id="manage_service_attach_ssh_key"></a>
 > ManageAttachSshKeyResponse manage_service_attach_ssh_key(idssh_key_id)
 
 
@@ -266,7 +266,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_attach_to_private_network**
-<a name="manage_service_attach_to_private_network"></a>
+<a id="manage_service_attach_to_private_network"></a>
 > ManageAttachToPrivateNetworkResponse manage_service_attach_to_private_network(idnetwork_idmanage_attach_to_private_network_request)
 
 
@@ -388,7 +388,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_bind_project**
-<a name="manage_service_bind_project"></a>
+<a id="manage_service_bind_project"></a>
 > ManageBindProjectResponse manage_service_bind_project(idmanage_bind_project_request)
 
 
@@ -500,7 +500,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_change_configuration**
-<a name="manage_service_change_configuration"></a>
+<a id="manage_service_change_configuration"></a>
 > ManageChangeConfigurationResponse manage_service_change_configuration(idmanage_change_configuration_request)
 
 
@@ -617,7 +617,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_change_pinned**
-<a name="manage_service_change_pinned"></a>
+<a id="manage_service_change_pinned"></a>
 > ManageChangePinnedResponse manage_service_change_pinned(idmanage_change_pinned_request)
 
 
@@ -729,7 +729,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_change_ssh_access**
-<a name="manage_service_change_ssh_access"></a>
+<a id="manage_service_change_ssh_access"></a>
 > ManageChangeSshAccessResponse manage_service_change_ssh_access(idmanage_change_ssh_access_request)
 
 
@@ -841,7 +841,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_check_software_requirements**
-<a name="manage_service_check_software_requirements"></a>
+<a id="manage_service_check_software_requirements"></a>
 > ManageCheckSoftwareRequirementsResponse manage_service_check_software_requirements(manage_check_software_requirements_request)
 
 
@@ -938,7 +938,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_create_vps**
-<a name="manage_service_create_vps"></a>
+<a id="manage_service_create_vps"></a>
 > ManageCreateVpsResponse manage_service_create_vps(manage_create_vps_request)
 
 
@@ -1063,7 +1063,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_detach_from_private_network**
-<a name="manage_service_detach_from_private_network"></a>
+<a id="manage_service_detach_from_private_network"></a>
 > ManageDetachFromPrivateNetworkResponse manage_service_detach_from_private_network(idnetwork_id)
 
 
@@ -1168,7 +1168,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_detach_ip_address**
-<a name="manage_service_detach_ip_address"></a>
+<a id="manage_service_detach_ip_address"></a>
 > ManageDetachIpAddressResponse manage_service_detach_ip_address(ip_address)
 
 
@@ -1264,7 +1264,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_detach_ssh_key**
-<a name="manage_service_detach_ssh_key"></a>
+<a id="manage_service_detach_ssh_key"></a>
 > ManageDetachSshKeyResponse manage_service_detach_ssh_key(idssh_key_id)
 
 
@@ -1369,7 +1369,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_disable_post_install_alert**
-<a name="manage_service_disable_post_install_alert"></a>
+<a id="manage_service_disable_post_install_alert"></a>
 > ManageDisablePostInstallAlertResponse manage_service_disable_post_install_alert(id)
 
 
@@ -1465,7 +1465,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_get_available_configuration**
-<a name="manage_service_get_available_configuration"></a>
+<a id="manage_service_get_available_configuration"></a>
 > ManageGetAvailableConfigurationResponse manage_service_get_available_configuration()
 
 
@@ -1535,7 +1535,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_get_file_manager_settings**
-<a name="manage_service_get_file_manager_settings"></a>
+<a id="manage_service_get_file_manager_settings"></a>
 > ManageGetFileManagerSettingsResponse manage_service_get_file_manager_settings(id)
 
 
@@ -1631,7 +1631,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_get_history**
-<a name="manage_service_get_history"></a>
+<a id="manage_service_get_history"></a>
 > ManageGetHistoryResponse manage_service_get_history(id)
 
 
@@ -1727,7 +1727,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_get_info**
-<a name="manage_service_get_info"></a>
+<a id="manage_service_get_info"></a>
 > ManageGetInfoResponse manage_service_get_info(id)
 
 
@@ -1823,7 +1823,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_get_installed_software**
-<a name="manage_service_get_installed_software"></a>
+<a id="manage_service_get_installed_software"></a>
 > ManageGetInstalledSoftwareResponse manage_service_get_installed_software(id)
 
 
@@ -1919,7 +1919,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_get_list**
-<a name="manage_service_get_list"></a>
+<a id="manage_service_get_list"></a>
 > ManageGetListResponse manage_service_get_list()
 
 
@@ -2043,7 +2043,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_get_region_list**
-<a name="manage_service_get_region_list"></a>
+<a id="manage_service_get_region_list"></a>
 > ManageGetRegionListResponse manage_service_get_region_list()
 
 
@@ -2113,7 +2113,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_get_statuses**
-<a name="manage_service_get_statuses"></a>
+<a id="manage_service_get_statuses"></a>
 > ManageGetStatusesResponse manage_service_get_statuses()
 
 
@@ -2183,7 +2183,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_reboot_vps**
-<a name="manage_service_reboot_vps"></a>
+<a id="manage_service_reboot_vps"></a>
 > ManageRebootVpsResponse manage_service_reboot_vps(id)
 
 
@@ -2279,7 +2279,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_reinstall**
-<a name="manage_service_reinstall"></a>
+<a id="manage_service_reinstall"></a>
 > ManageReinstallResponse manage_service_reinstall(idmanage_reinstall_request)
 
 
@@ -2401,7 +2401,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_remove_vps**
-<a name="manage_service_remove_vps"></a>
+<a id="manage_service_remove_vps"></a>
 > ManageRemoveVpsResponse manage_service_remove_vps(id)
 
 
@@ -2497,7 +2497,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_reserve_vps_subdomain**
-<a name="manage_service_reserve_vps_subdomain"></a>
+<a id="manage_service_reserve_vps_subdomain"></a>
 > ManageReserveVpsSubdomainResponse manage_service_reserve_vps_subdomain()
 
 
@@ -2567,7 +2567,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_reset_password**
-<a name="manage_service_reset_password"></a>
+<a id="manage_service_reset_password"></a>
 > ManageResetPasswordResponse manage_service_reset_password(id)
 
 
@@ -2663,7 +2663,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_reset_vps**
-<a name="manage_service_reset_vps"></a>
+<a id="manage_service_reset_vps"></a>
 > ManageResetVpsResponse manage_service_reset_vps(id)
 
 
@@ -2759,7 +2759,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_start_rescue**
-<a name="manage_service_start_rescue"></a>
+<a id="manage_service_start_rescue"></a>
 > ManageStartRescueResponse manage_service_start_rescue(id)
 
 
@@ -2855,7 +2855,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_start_vps**
-<a name="manage_service_start_vps"></a>
+<a id="manage_service_start_vps"></a>
 > ManageStartVpsResponse manage_service_start_vps(id)
 
 
@@ -2951,7 +2951,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_stop_rescue**
-<a name="manage_service_stop_rescue"></a>
+<a id="manage_service_stop_rescue"></a>
 > ManageStopRescueResponse manage_service_stop_rescue(id)
 
 
@@ -3047,7 +3047,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_stop_vps**
-<a name="manage_service_stop_vps"></a>
+<a id="manage_service_stop_vps"></a>
 > ManageStopVpsResponse manage_service_stop_vps(id)
 
 
@@ -3178,7 +3178,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_unarchive**
-<a name="manage_service_unarchive"></a>
+<a id="manage_service_unarchive"></a>
 > ManageUnarchiveResponse manage_service_unarchive(id)
 
 
@@ -3274,7 +3274,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **manage_service_update_info**
-<a name="manage_service_update_info"></a>
+<a id="manage_service_update_info"></a>
 > ManageUpdateInfoResponse manage_service_update_info(idmanage_update_info_request)
 
 

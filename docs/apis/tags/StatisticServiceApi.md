@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.statistic_service_api.StatisticServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**statistic_service_get_process_list**](#statistic_service_get_process_list) | **get** /v1/vps/statistic/processes/{id} | 
 
 # **statistic_service_get_cpu**
-<a name="statistic_service_get_cpu"></a>
+<a id="statistic_service_get_cpu"></a>
 > StatisticGetCpuResponse statistic_service_get_cpu(id)
 
 
@@ -146,7 +146,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **statistic_service_get_cpu_details**
-<a name="statistic_service_get_cpu_details"></a>
+<a id="statistic_service_get_cpu_details"></a>
 > StatisticGetCpuDetailsResponse statistic_service_get_cpu_details(id)
 
 
@@ -277,7 +277,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **statistic_service_get_disk**
-<a name="statistic_service_get_disk"></a>
+<a id="statistic_service_get_disk"></a>
 > StatisticGetDiskResponse statistic_service_get_disk(id)
 
 
@@ -408,7 +408,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **statistic_service_get_disk_usage**
-<a name="statistic_service_get_disk_usage"></a>
+<a id="statistic_service_get_disk_usage"></a>
 > StatisticGetDiskUsageResponse statistic_service_get_disk_usage(id)
 
 
@@ -539,7 +539,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **statistic_service_get_load_average**
-<a name="statistic_service_get_load_average"></a>
+<a id="statistic_service_get_load_average"></a>
 > StatisticGetLoadAverageResponse statistic_service_get_load_average(id)
 
 
@@ -670,7 +670,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **statistic_service_get_memory**
-<a name="statistic_service_get_memory"></a>
+<a id="statistic_service_get_memory"></a>
 > StatisticGetMemoryResponse statistic_service_get_memory(id)
 
 
@@ -801,7 +801,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **statistic_service_get_network**
-<a name="statistic_service_get_network"></a>
+<a id="statistic_service_get_network"></a>
 > StatisticGetNetworkResponse statistic_service_get_network(id)
 
 
@@ -932,7 +932,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **statistic_service_get_process_list**
-<a name="statistic_service_get_process_list"></a>
+<a id="statistic_service_get_process_list"></a>
 > StatisticGetProcessListResponse statistic_service_get_process_list(id)
 
 

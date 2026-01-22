@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.backup_service_api.BackupServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**backup_service_restore_server**](#backup_service_restore_server) | **post** /v1/vps/{id}/backup/{copy_id}/server | 
 
 # **backup_service_get_available_copies**
-<a name="backup_service_get_available_copies"></a>
+<a id="backup_service_get_available_copies"></a>
 > BackupGetAvailableCopiesResponse backup_service_get_available_copies()
 
 
@@ -109,7 +109,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **backup_service_get_backup_file_list**
-<a name="backup_service_get_backup_file_list"></a>
+<a id="backup_service_get_backup_file_list"></a>
 > BackupGetBackupFileListResponse backup_service_get_backup_file_list(idcopy_id)
 
 
@@ -250,7 +250,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **backup_service_get_orders**
-<a name="backup_service_get_orders"></a>
+<a id="backup_service_get_orders"></a>
 > BackupGetOrdersResponse backup_service_get_orders()
 
 
@@ -356,7 +356,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **backup_service_restore_file**
-<a name="backup_service_restore_file"></a>
+<a id="backup_service_restore_file"></a>
 > BackupRestoreFileResponse backup_service_restore_file(idcopy_idbackup_restore_file_request)
 
 
@@ -482,7 +482,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **backup_service_restore_server**
-<a name="backup_service_restore_server"></a>
+<a id="backup_service_restore_server"></a>
 > BackupRestoreServerResponse backup_service_restore_server(idcopy_idbackup_restore_server_request)
 
 

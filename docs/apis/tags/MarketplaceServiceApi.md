@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.marketplace_service_api.MarketplaceServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**marketplace_service_get_software_list**](#marketplace_service_get_software_list) | **get** /v1/vps/marketplace/software/list | 
 
 # **marketplace_service_get_software_info**
-<a name="marketplace_service_get_software_info"></a>
+<a id="marketplace_service_get_software_info"></a>
 > MarketplaceGetSoftwareInfoResponse marketplace_service_get_software_info(nameversion)
 
 
@@ -114,7 +114,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **marketplace_service_get_software_list**
-<a name="marketplace_service_get_software_list"></a>
+<a id="marketplace_service_get_software_list"></a>
 > MarketplaceGetSoftwareListResponse marketplace_service_get_software_list()
 
 

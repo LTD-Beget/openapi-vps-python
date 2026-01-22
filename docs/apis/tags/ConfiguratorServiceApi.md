@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.configurator_service_api.ConfiguratorServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**configurator_service_get_configurator_info**](#configurator_service_get_configurator_info) | **get** /v1/vps/configurator/info | 
 
 # **configurator_service_get_calculation**
-<a name="configurator_service_get_calculation"></a>
+<a id="configurator_service_get_calculation"></a>
 > ConfiguratorGetCalculationResponse configurator_service_get_calculation()
 
 
@@ -178,7 +178,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **configurator_service_get_configurator_info**
-<a name="configurator_service_get_configurator_info"></a>
+<a id="configurator_service_get_configurator_info"></a>
 > ConfiguratorGetConfiguratorInfoResponse configurator_service_get_configurator_info()
 
 

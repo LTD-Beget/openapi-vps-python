@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # beget_openapi_vps.apis.tags.software_license_service_api.SoftwareLicenseServiceApi
 
 All URIs are relative to *https://api.beget.com*
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**software_license_service_get_license_info**](#software_license_service_get_license_info) | **get** /v1/vps/software/license | 
 
 # **software_license_service_change_license_plan**
-<a name="software_license_service_change_license_plan"></a>
+<a id="software_license_service_change_license_plan"></a>
 > SoftwareLicenseChangeLicensePlanResponse software_license_service_change_license_plan(vps_idsoftware_license_change_license_plan_request)
 
 
@@ -122,7 +122,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **software_license_service_get_license_info**
-<a name="software_license_service_get_license_info"></a>
+<a id="software_license_service_get_license_info"></a>
 > SoftwareLicenseGetLicenseInfoResponse software_license_service_get_license_info()
 
 
