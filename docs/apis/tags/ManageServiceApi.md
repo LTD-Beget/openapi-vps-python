@@ -658,6 +658,8 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     body = ManageChangePinnedRequest(
         id="id_example",
         ui_pinned=True,
+        after_rank="after_rank_example",
+        before_rank="before_rank_example",
     )
     try:
         api_response = api_instance.manage_service_change_pinned(
@@ -1008,6 +1010,23 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
         configuration_group="configuration_group_example",
         ui_pinned=True,
         project_id="project_id_example",
+        ui_pinned_after_rank="ui_pinned_after_rank_example",
+        ui_pinned_before_rank="ui_pinned_before_rank_example",
+        network_interfaces=[
+            ManageNetworkInterface(
+                public=ManagePublicInterface(
+                    allocate_new=dict(),
+                    existing=ManagePublicInterfaceUseExistingPublicIp(
+                        address="address_example",
+                    ),
+                ),
+                private=ManagePrivateInterface(
+                    network_id="network_id_example",
+                    allocate_new=dict(),
+                    specific=ManagePrivateInterfaceAllocateSpecificPrivateIp(),
+                ),
+            )
+        ],
     )
     try:
         api_response = api_instance.manage_service_create_vps(
@@ -2402,7 +2421,7 @@ Type | Description  | Notes
 
 # **manage_service_remove_vps**
 <a id="manage_service_remove_vps"></a>
-> ManageRemoveVpsResponse manage_service_remove_vps(id)
+> ManageRemoveVpsResponse manage_service_remove_vps(idmanage_remove_vps_request)
 
 
 
@@ -2413,6 +2432,7 @@ Type | Description  | Notes
 import beget_openapi_vps
 from beget_openapi_vps.apis.tags import manage_service_api
 from beget_openapi_vps.model.manage_remove_vps_response import ManageRemoveVpsResponse
+from beget_openapi_vps.model.manage_remove_vps_request import ManageRemoveVpsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.beget.com
 # See configuration.py for a list of all supported configuration parameters.
@@ -2438,9 +2458,14 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     path_params = {
         'id': "id_example",
     }
+    body = ManageRemoveVpsRequest(
+        id="id_example",
+        ip_action="DELETE",
+    )
     try:
         api_response = api_instance.manage_service_remove_vps(
             path_params=path_params,
+            body=body,
         )
         pprint(api_response)
     except beget_openapi_vps.ApiException as e:
@@ -2450,11 +2475,21 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+body | typing.Union[SchemaForRequestBodyApplicationJson] | required |
 path_params | RequestPathParams | |
+content_type | str | optional, default is 'application/json' | Selects the schema and serialization of the request body
 accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### body
+
+# SchemaForRequestBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ManageRemoveVpsRequest**](../../models/ManageRemoveVpsRequest.md) |  | 
+
 
 ### path_params
 #### RequestPathParams

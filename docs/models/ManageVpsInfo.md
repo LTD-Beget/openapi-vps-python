@@ -43,6 +43,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **software_id** | str,  | str,  |  | [optional] 
 **snapshot_id** | str,  | str,  |  | [optional] 
 **image_id** | str,  | str,  |  | [optional] 
+**display_rank** | str,  | str,  |  | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 # ssh_keys
