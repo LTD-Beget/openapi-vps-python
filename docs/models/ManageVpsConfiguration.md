@@ -16,6 +16,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **bandwidth_public** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] 
 **price_day** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] value must be a 64 bit float
 **price_month** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] value must be a 64 bit float
+**price_hour** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] value must be a 64 bit float
 **available** | bool,  | BoolClass,  |  | [optional] 
 **custom** | bool,  | BoolClass,  |  | [optional] 
 **configurable** | bool,  | BoolClass,  |  | [optional] 

@@ -240,6 +240,7 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
     body = NetworkOrderIpAddressRequest(
         id="id_example",
         region="region_example",
+        address_family="IP_V4",
     )
     try:
         api_response = api_instance.network_service_order_ip_address(

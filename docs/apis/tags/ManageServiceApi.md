@@ -1015,7 +1015,9 @@ with beget_openapi_vps.ApiClient(configuration) as api_client:
         network_interfaces=[
             ManageNetworkInterface(
                 public=ManagePublicInterface(
-                    allocate_new=dict(),
+                    allocate_new=ManagePublicInterfaceAllocateNewPublicIp(
+                        address_family="IP_V4",
+                    ),
                     existing=ManagePublicInterfaceUseExistingPublicIp(
                         address="address_example",
                     ),
